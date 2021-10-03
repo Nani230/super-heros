@@ -1,0 +1,58 @@
+@media (max-width: 560px) {
+    .mobilehero {
+        visibility: visible;
+    }
+    .fliter-name-fields {
+        width: 100%;
+    }
+    .container {
+        padding-top: 30px;
+    }
+    .select {
+        width: 40%;
+    }
+    .filters-field {
+        margin-bottom: 30px;
+    }
+    .minimum {
+        width: auto;
+    }
+    .min {
+        margin-bottom: 20px;
+    }
+    .sortings {
+        width: 100%;
+        flex-direction: column;
+    }
+    .allsuperheros {
+        flex-direction: column;
+    }
+    .allsuperheros > h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .superhero {
+        width: 100%;
+    }
+    .modal {
+        width: 90%;
+        height: 500px;
+        overflow: scroll;
+        display: block;
+        flex-direction: column;
+    }
+    .modal-details {
+        width: 100%;
+    }
+    .modal-img {
+        width: 100%;
+        height: 60%;
+    }
+    #hero-name {
+        font-size: 20px;
+    }
+    .canclebtn {
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+}

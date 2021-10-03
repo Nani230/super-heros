@@ -1,0 +1,346 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.mobilehero {
+    visibility: hidden;
+}
+.sortings {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* css for modal */
+
+.modal-parent {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index: 10;
+    opacity: 0;
+    transition: 0.5s;
+}
+.modal {
+    height: auto;
+    width: 70%;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    transition: 0.5s;
+    transform: translateY(-30vh);
+}
+
+.modal-img {
+    width: 40%;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+}
+.modal-img > img {
+    width: 100%;
+
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.modal-details {
+    width: 70%;
+    min-height: 75vh;
+    font-family: "Segoe UI";
+}
+.details {
+    margin-top: 10px;
+}
+.details-title {
+    font-size: 25px;
+    color: gray;
+}
+.appearance {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.property {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+}
+.property-details {
+    font-size: 13px;
+    color: black;
+}
+.details > div {
+    width: 30%;
+    margin-top: 6px;
+}
+
+.connection .details > div {
+    width: 45%;
+}
+
+/* css for main */
+.main {
+    display: flex;
+    justify-content: center;
+    font-family: Segoe UI;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    width: 90%;
+    padding: 50px 10px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+.container > h1 {
+    text-align: center;
+}
+
+/* css for fliter */
+.fliters {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: gray;
+    margin-bottom: 30px;
+}
+.fliter-name-fields {
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid darkgray;
+    padding-left: 8px;
+    margin-bottom: 30px;
+}
+.filter-fields {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.filters-field {
+    height: 40px;
+    width: 30%;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid darkgray;
+    padding-left: 8px;
+}
+.filters-field > option {
+    background-color: black;
+    color: white;
+}
+
+.minimum {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+.min {
+    display: flex;
+    flex-direction: column;
+}
+.min > input {
+    height: 40px;
+    width: 90%;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid darkgray;
+    padding-left: 8px;
+    margin-bottom: 30px;
+}
+.min > select {
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid darkgray;
+    padding-left: 8px;
+    width: 300px;
+}
+.filters-field {
+    margin-bottom: 10px;
+}
+.select {
+    width: 30%;
+}
+.filter-fields {
+    width: 100%;
+}
+.select-gender {
+    width: 100%;
+}
+.select-publisher {
+    width: 100%;
+}
+.select-gender > select {
+    width: 100%;
+}
+.select-publisher > select {
+    width: 100%;
+}
+.btn {
+    padding: 12px 15px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:active {
+    border: 1px solid darkgray;
+    color: darkgray;
+    background-color: transparent;
+}
+.glow-on-hover {
+    padding: 12px 15px;
+    font-size: 18px;
+    outline: none;
+
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.superheroes {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.superhero {
+    width: 24%;
+    box-shadow: 0 0 5px gray;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 30px;
+}
+.superhero-img {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    /* transition: 0.5s ease-in-out; */
+}
+/* .superhero-img img:hover {
+    transform: scale(1.05);
+} */
+.superhero-details {
+    padding: 10px;
+}
+.superhero-name {
+    font-size: 25px;
+}
+.powerstate > div {
+    padding: 3px 0px;
+}
+.powerstate > div > p {
+    margin-top: 10px;
+}
+.bodystats {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.power-bg {
+    height: 10px;
+    width: 100%;
+    background-color: lightgray;
+    margin-top: 7px;
+}
+.power-fg {
+    height: 10px;
+    width: 100%;
+    background-color: skyblue;
+}
+.ps-details {
+    margin-top: 10px !important;
+}
